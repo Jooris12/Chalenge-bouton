@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <section>
+    <div id="counter">
+      0
+    </div>
+  </section> 
+  <section>
+    <button id="Augmenter">Augmenter </button>
+    <button id="Diminuer">Diminuer</button>
+    <button id="Revenir">Revenir à 0</button>
+  </section> 
+  <script>
+
+  const counter=document.getElementById('counter');
+  const Augmenter=document.getElementById('Augmenter');
+  const Diminuer=document.getElementById('Diminuer');
+  const Revenir=document.getElementById('Revenir');
+   let resultat=0;
+   Augmenter.addEventListener('click',function(){
+    resultat++;
+    counter.textContent=resultat;
+  });
+  Diminuer.addEventListener('click',function(){
+    resultat--;
+    counter.textContent=resultat;
+    if (resultat<0) {counter.textContent=resultat=0;
+    }
+  });
+  Revenir.addEventListener('click',function(){
+    resultat=0;
+    counter.textContent=resultat;
+  });
+    
+
+  </script>
+</body>
+</html>
